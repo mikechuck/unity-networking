@@ -1,0 +1,34 @@
+Arch:
+- lock fps at 60 for whole game
+- build two different targets: client and server
+- server runs headless on a server (will be local windows for now)
+
+server code:
+- server will wait for 2 or more connected players
+- when a player connects, assign it a uuid and send entire player list back
+- when it has two connected players, game will start
+	- server will send "load main scene" message to all clients
+- server will keep list of players
+
+client code:
+- clients will connect to server using IP
+- client will save uuid upon message received for it
+- if only 1 client has joined, stay in lobby screen ("Waiting for another player..")
+- upon input, send new position to server with player ID
+
+
+
+
+PlayersManager script
+
+- save list of players (uuid)
+- save dictionary <uuid, player position>
+- when server recieves new position from client, assign it to the client's uuid
+	- then broadcast this array to all clients
+	- each client will receive this broadcast and update all player locations
+
+
+
+
+
+// leftoff: create playermanager script, create way to differeniate server/client builds, start coding using client and server directives(?) # CLIENT vs # SERVER or whatever

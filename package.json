@@ -1,0 +1,11 @@
+{
+  "name": "basic-mp-networking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-server": "cd Builds/Windows/Server && \"Basic MP Networking.exe\""
+  },
+  "author": "",
+  "license": "ISC"
+}
